@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:backgroundTint="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:headerLayout="@layout/header"
+        app:itemIconTint="#000000"
+        app:itemTextColor="@color/dark_gray"
+        app:menu="@menu/main_menu" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradbg">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:iconTint="@color/black"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:itemIconTint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/menu_icon"
+            app:titleTextColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/abtus_page_logo"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abtus_title"
+            app:srcCompat="@drawable/logo3" />
+
+        <TextView
+            android:id="@+id/abtus_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_margin="20dp"
+            android:text="About Us"
+            android:textColor="@color/dark_gray"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/abtus_text"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingRight="20dp"
+            android:text=" ' We are a group of engineers who wish to contribute to the society through our project 'Agribot'. Agribot is an initiative taken by us to lend a helping hand to the Agricultural Sector. We hope it serves as a boon to the farmers and helps them in reducing their health risks as well as make it easier to obtain greater,healthier yield '"
+            android:textColor="@color/dark_gray"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:textSize="12dp"
+            app:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abtus_page_logo"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/abtus_teamsign"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="- Team Agribot "
+            android:textColor="@color/dark_gray"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:textSize="12dp"
+            app:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abtus_text"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abtus_teamsign">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:id="@+id/abtus_shreya_card"
+                android:layout_height="105dp"
+                android:backgroundTint="@color/black"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/abtus_shreya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Shreya Shetty"
+                        android:textColor="@color/light_gray"
+                        android:textSize="12sp"
+                        android:textStyle="italic"
+                        app:fontFamily="@font/poppins_semibold" />
+
+                    <TextView
+                        android:id="@+id/abtus_shreya_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="B.E - Information Technology"
+                        android:textColor="@color/light_gray"
+                        android:textSize="10sp"
+                        android:layout_below="@+id/abtus_shreya"
+                        app:fontFamily="@font/poppins_semibold" />
+
+                    <TextView
+                        android:id="@+id/abtus_shreya_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/abtus_shreya_class"
+                        android:text="shreya03@somaiya.edu"
+                        android:textColor="@color/light_gray"
+                        android:textSize="10sp"
+                        app:fontFamily="@font/poppins_semibold" />
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:id="@+id/abtsus_revaa_card"
+                android:layout_height="105dp"
+                android:backgroundTint="@color/white"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/abtus_revaa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Revaa Naik"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:fontFamily="@font/poppins_semibold" />
+
+                <TextView
+                    android:id="@+id/abtus_revaa_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="B.E - Information Technology"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="10sp"
+                    android:layout_below="@+id/abtus_revaa"
+                    app:fontFamily="@font/poppins_semibold" />
+
+                <TextView
+                    android:id="@+id/abtus_revaa_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/abtus_revaa_class"
+                    android:text="revaa.naik@somaiya.edu"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="10sp"
+                    app:fontFamily="@font/poppins_semibold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:id="@+id/abtus_raunak_card"
+                android:layout_height="105dp"
+                android:backgroundTint="@color/white"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/abtus_raunak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Raunak Mane"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="12sp"
+                        android:textStyle="italic"
+                        app:fontFamily="@font/poppins_semibold" />
+
+                    <TextView
+                        android:id="@+id/abtus_raunak_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="B.E - Electronics and Telecommunication"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:layout_below="@+id/abtus_raunak"
+                        app:fontFamily="@font/poppins_semibold" />
+
+                    <TextView
+                        android:id="@+id/abtus_raunak_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/abtus_raunak_class"
+                        android:text="raunak.mane@somaiya.edu"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        app:fontFamily="@font/poppins_semibold" />
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:id="@+id/abtus_raj_card"
+                android:layout_height="105dp"
+                android:backgroundTint="@color/black"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/abtus_raj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Raj Bhosale"
+                        android:textColor="@color/light_gray"
+                        android:textSize="12sp"
+                        android:textStyle="italic"
+                        app:fontFamily="@font/poppins_semibold" />
+
+                    <TextView
+                        android:id="@+id/abtus_raj_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="B.E - Electronics and Telecommunication"
+                        android:textColor="@color/light_gray"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:layout_below="@+id/abtus_raj"
+                        app:fontFamily="@font/poppins_semibold" />
+
+                    <TextView
+                        android:id="@+id/abtus_raj_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/abtus_raj_class"
+                        android:text="raj.bhosale@somaiya.edu"
+                        android:textColor="@color/light_gray"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        app:fontFamily="@font/poppins_semibold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

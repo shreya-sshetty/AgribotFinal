@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/crops_icon"
+            android:iconTint="@color/black"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_controller"
+            android:icon="@drawable/controller_icon"
+            android:iconTint="@color/black"
+            android:title="Bot Controller" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile_icon"
+            android:iconTint="@color/black"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_abtus"
+            android:icon="@drawable/abtus_icon"
+            android:iconTint="@color/black"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/faq_icon"
+            android:iconTint="@color/black"
+            android:title="FAQs" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout_icon"
+            android:iconTint="@color/black"
+            android:title="Logout" />
+
+    </group>
+
+</menu>
